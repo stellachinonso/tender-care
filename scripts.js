@@ -20,7 +20,7 @@ document
           errorMessage.innerText = "Email not found. Please sign up.";
           errorMessage.style.display = "block";
         } else {
-          window.location.assign("./home/index.html");
+          window.location.assign("./home/home.html");
         }
       })
       .catch((error) => {
