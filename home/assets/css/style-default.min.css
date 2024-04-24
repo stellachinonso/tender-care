@@ -2782,9 +2782,10 @@ blockquote:before {
   width: 100%;
   display: block;
   text-align: center;
-  background-color: #c43f76;
+  background-color: #fff;
   border: 1px solid #c43f76;
   color: #6a78a1;
+  border-radius: 5px;
   padding: 12px 15px;
   margin-bottom: 15px;
   -webkit-transition: all 0.4s ease-out;
