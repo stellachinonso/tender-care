@@ -42,7 +42,6 @@ document
 
     const email = document.getElementById("email").value;
     const password = document.getElementById("password").value;
-    console.log(password);
 
     axios
       .post("https://development-tracker.onrender.com/login", {
@@ -52,14 +51,17 @@ document
       .then((response) => {
         console.log(response.data);
         if (response.data.error === "email_not_found") {
-          errorMessage.innerText = "email not found please sign up";
+          const errorMessage = document.getElementById("error-message");
+          errorMessage.innerText = "Email not found. Please sign up.";
+          errorMessage.style.display = "block";
+        } else {
+          window.location.assign("./home/index.html");
         }
-        window.location.assign("./home/index.html");
-        // document.getElementById("userName").textContent = data.name;
-        // document.getElementById("welcomeMessage").style.display = "block";
       })
       .catch((error) => {
         console.error("Error:", error);
-        // Handle error
+        const errorMessage = document.getElementById("error-message");
+        errorMessage.innerText = "An error occurred. Please try again later.";
+        errorMessage.style.display = "block";
       });
   });

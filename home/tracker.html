@@ -191,6 +191,7 @@
       media="all"
     />
 
+    <link rel="stylesheet" href="./assets/css/styles.css" />
     <!--Nice Select css -->
     <link
       rel="stylesheet"
@@ -217,7 +218,7 @@
       media="all"
     />
   </head>
-  <body>
+  <>
     <!--[if lt IE 7]>
       <p class="browsehappy">
         We are Extreamly sorry, But the browser you are using is probably from
@@ -309,7 +310,7 @@
                     </li>
 
                     <li class="nav-item">
-                      <a class="nav-link" href="#">About</a>
+                      <a class="nav-link" href="about.html">About</a>
                     </li>
                     <li class="nav-item">
                       <a class="nav-link" href="contact.html">Contact</a>
@@ -425,7 +426,7 @@
                               <div class="sign-form">
                                 <form
                                   action="#"
-                                  id="registratioForm"
+                                  id="registrationForm"
                                   method="post"
                                 >
                                   <input
@@ -492,239 +493,173 @@
                       <!-- Regsiter Form Area Start -->
                       <div class="col-lg-7 col-md-6 ml-auto response-container">
                         <div class="register-form-wrap">
-                          <h3>Development Tracker</h3>
-                          <div class="register-form">
-                            <div>
-                              <div class="row">
-                                <div class="col-12 col-sm-6">
-                                  <div class="form-group">
-                                    <label for="register_email">Email</label>
-                                    <input
-                                      type="email"
-                                      class="form-control"
-                                      id="register_email"
-                                      name="register_email"
-                                      required
-                                    />
-                                  </div>
-                                </div>
+                            <h3>Development Tracker</h3>
+                            <div class="register-form">
+                                <div>
+                                    <div class="row">
+                                        <div class="col-12 col-sm-6">
+                                            <div class="form-group">
+                                                <label for="register_email">Email</label>
+                                                <input type="email" class="form-control" id="register_email" name="register_email" required/>
+                                            </div>
+                                        </div>
 
-                                <div class="col-lg-12 col-sm-6">
-                                  <div class="form-group">
-                                    <input
-                                      type="text"
-                                      class="form-control"
-                                      name="register_name"
-                                      required
-                                    />
-                                    -->
-                                  </div>
-                                </div>
-                              </div>
-                              <div class="row">
-                                <div class="col-12 col-sm-6">
-                                  <div class="form-group">
-                                    <label for="register_name"
-                                      >Child's Date of Birth</label
-                                    >
-                                    <input
-                                      type="date"
-                                      class="form-control"
-                                      id="child_dob"
-                                      name="child_dob"
-                                      required
-                                    />
-                                  </div>
-                                </div>
+                                        <div class="col-12 col-sm-6">
+                                            <div class="form-group">
+                                                <label for="register_name">Full Name</label>
+                                                <input type="text" class="form-control" id="register_name" name="register_name" required />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-12 col-sm-6">
+                                            <div class="form-group">
+                                                <label for="register_name">Child's Date of Birth</label>
+                                                <input type="date" class="form-control" id="child_dob" name="child_dob" required />
+                                            </div>
+                                        </div>
 
-                                <div class="col-12 col-sm-6"></div>
-                              </div>
-                              <div class="form-group">
-                                <div
-                                  class="custom-control custom-checkbox float-lg-right"
-                                >
-                                  <input
-                                    type="checkbox"
-                                    class="custom-control-input"
-                                    id="customCheck1"
-                                  />
-                                  <label
-                                    class="custom-control-label"
-                                    for="customCheck1"
-                                  >
-                                    I have read and agree to the
-                                    <a href="#">TenderCare</a> Terms of
-                                    Service</label
-                                  >
+                                        <div class="col-12 col-sm-6">
+                                            
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                      <div class="custom-control custom-checkbox float-lg-right">
+                                          <input type="checkbox" class="custom-control-input" id="customCheck1">
+                                          <label class="custom-control-label" for="customCheck1"> I have read and agree to the <a href="#">TenderCare</a> Terms of Service</label>
+                                      </div>
+                                      <button onclick="sendMessage()" class="btn btn-reg">Submit</button>
+                                  </div>
+                                  <div id="response"></div>
+                                  </div>
+                                  
+                                  <div>
+                                    <div class="row">
+                                      <div class="col-12 col-sm-12 response-container">
+                                          <div class="form-group">
+                                              <label for="question">Please ask your question</label>
+                                              <textarea id="user-input" placeholder="Enter your message" rows="3" cols="200" class="form-control" id="question" name="question"></textarea>
+                                          </div>
+                                      </div>
+                                  </div>
+                                  <div class="form-group">
+                                    <div class="custom-control custom-checkbox float-lg-right">
+                                        <input type="checkbox" class="custom-control-input" id="customCheck1">
+                                        <label class="custom-control-label" for="customCheck1"> I have read and agree to the <a href="#">Tender Care</a> Terms of Service</label>
+                                    </div>
+                                    <button onclick="sendMessage2()" class="btn btn-reg">Ask</button>
+                                
                                 </div>
-                                <button
-                                  onclick="sendMessage()"
-                                  class="btn btn-reg"
-                                >
-                                  Submit
-                                </button>
-                              </div>
-                              <div id="response"></div>
+                                  </div>
+
+                                    
+                                    
                             </div>
-
-                            <h3>Further Questions?</h3>
-                            <div>
-                              <div class="row">
-                                <div
-                                  class="col-12 col-sm-12 response-container"
-                                >
-                                  <div class="form-group">
-                                    <label for="question"
-                                      >Please ask your question</label
-                                    >
-                                    <textarea
-                                      id="user-input"
-                                      placeholder="Enter your message"
-                                      rows="3"
-                                      cols="200"
-                                      class="form-control"
-                                      id="question"
-                                      name="question"
-                                    ></textarea>
-                                  </div>
-                                </div>
-                              </div>
-                              <div class="form-group">
-                                <div
-                                  class="custom-control custom-checkbox float-lg-right"
-                                >
-                                  <input
-                                    type="checkbox"
-                                    class="custom-control-input"
-                                    id="customCheck1"
-                                  />
-                                  <label
-                                    class="custom-control-label"
-                                    for="customCheck1"
-                                  >
-                                    I have read and agree to the
-                                    <a href="#">Tender Care</a> Terms of
-                                    Service</label
-                                  >
-                                </div>
-                                <button
-                                  onclick="sendMessage()"
-                                  class="btn btn-reg"
-                                >
-                                  Ask
-                                </button>
-                                <div id="response"></div>
-                              </div>
-                            </div>
-                          </div>
                         </div>
-                      </div>
-                      <!-- Regsiter Form Area End -->
                     </div>
-                  </div>
+                    <!-- Regsiter Form Area End -->
                 </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!--== Register Page Content End ==-->
+
+<!--== Footer Area Start ==-->
+<footer id="footer-area">
+  <!-- Footer Widget Start -->
+  <div class="footer-widget section-padding">
+    <div class="container">
+      <div class="row">
+        <!-- Single Widget Start -->
+        <div class="col-lg-4 col-sm-6">
+          <div class="single-widget-wrap">
+            <div class="widgei-body">
+              <div class="footer-about">
+                <p>Call us at</p>
+                <a href="#">Phone: +8745 44 5444</a>
+                <a href="#">Fax: +88474 156 362</a> <br />
+                <a href="#">Email: demoemail@demo.com</a>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
-    <!--== Register Page Content End ==-->
+        <!-- Single Widget End -->
 
-    <!--== Footer Area Start ==-->
-    <footer id="footer-area">
-      <!-- Footer Widget Start -->
-      <div class="footer-widget section-padding">
-        <div class="container">
-          <div class="row">
-            <!-- Single Widget Start -->
-            <div class="col-lg-4 col-sm-6">
-              <div class="single-widget-wrap">
-                <div class="widgei-body">
-                  <div class="footer-about">
-                    <p>Call us at</p>
-                    <a href="#">Phone: +8745 44 5444</a>
-                    <a href="#">Fax: +88474 156 362</a> <br />
-                    <a href="#">Email: demoemail@demo.com</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- Single Widget End -->
-
-            <!-- Single Widget Start -->
-            <div class="col-lg-3 col-sm-6">
-              <div class="single-widget-wrap">
-                <h4 class="widget-title">Links</h4>
-                <div class="widgei-body">
-                  <ul class="footer-list clearfix">
-                    <li><a href="home.html">Home</a></li>
-                    <li><a href="tracker.html">Tracker</a></li>
-                    <li><a href="connect.html">Connect</a></li>
-                    <li><a href="resources.html">Resources</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <!-- Single Widget End -->
-
-            <!-- Single Widget Start -->
-            <div class="col-lg-3 col-sm-6">
-              <div class="single-widget-wrap">
-                <h4 class="widget-title">Links</h4>
-                <div class="widgei-body">
-                  <ul class="footer-list clearfix">
-                    <li><a href="home.html">Home</a></li>
-                    <li><a href="tracker.html">Tracker</a></li>
-                    <li><a href="connect.html">Connect</a></li>
-                    <li><a href="resources.html">Resources</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <!-- Single Widget End -->
-
-            <!-- Single Widget Start -->
-            <div class="col-lg-2 col-sm-6">
-              <div class="single-widget-wrap">
-                <h4 class="widget-title">Links</h4>
-                <div class="widgei-body">
-                  <ul class="footer-list clearfix">
-                    <li><a href="home.html">Home</a></li>
-                    <li><a href="tracker.html">Tracker</a></li>
-                    <li><a href="connect.html">Connect</a></li>
-                    <li><a href="resources.html">Resources</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <!-- Single Widget End -->
-          </div>
-        </div>
-      </div>
-      <!-- Footer Widget End -->
-
-      <!-- Footer Bottom Start -->
-      <div class="footer-bottom">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-12 text-center">
-              <div class="footer-bottom-text">
-                <p>© 2024 Tender Care, All Rights Reserved.</p>
-              </div>
+        <!-- Single Widget Start -->
+        <div class="col-lg-3 col-sm-6">
+          <div class="single-widget-wrap">
+            <h4 class="widget-title">Links</h4>
+            <div class="widgei-body">
+              <ul class="footer-list clearfix">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="tracker.html">Tracker</a></li>
+                <li><a href="connect.html">Connect</a></li>
+                <li><a href="resources.html">Resources</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+              </ul>
             </div>
           </div>
         </div>
+        <!-- Single Widget End -->
+
+        <!-- Single Widget Start -->
+        <div class="col-lg-3 col-sm-6">
+          <div class="single-widget-wrap">
+            <h4 class="widget-title">Links</h4>
+            <div class="widgei-body">
+              <ul class="footer-list clearfix">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="tracker.html">Tracker</a></li>
+                <li><a href="connect.html">Connect</a></li>
+                <li><a href="resources.html">Resources</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- Single Widget End -->
+
+        <!-- Single Widget Start -->
+        <div class="col-lg-2 col-sm-6">
+          <div class="single-widget-wrap">
+            <h4 class="widget-title">Links</h4>
+            <div class="widgei-body">
+              <ul class="footer-list clearfix">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="tracker.html">Tracker</a></li>
+                <li><a href="connect.html">Connect</a></li>
+                <li><a href="resources.html">Resources</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- Single Widget End -->
       </div>
-      <!-- Footer Bottom End -->
-    </footer>
-    <!--== Footer Area End ==-->
+    </div>
+  </div>
+  <!-- Footer Widget End -->
+
+  <!-- Footer Bottom Start -->
+  <div class="footer-bottom">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <div class="footer-bottom-text">
+            <p>© 2024 Tender Care, All Rights Reserved.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
     <!--== Scroll Top ==-->
     <a href="#" class="scroll-top">
@@ -850,12 +785,15 @@
     <!-- custom js: custom scripts for theme style switcher for demo purpose  -->
     <script id="switcherhandle" src="assets/switcher/switcher.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <script src="./assets/js/script.js"></script>
+
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="/home/assets/js/scripts.js"></script>
+
+    <!-- <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script> -->
 
     <script>
       document
-        .getElementById("registratioForm")
+        .getElementById("registrationForm")
         .addEventListener("submit", function (event) {
           event.preventDefault(); // Prevent default form submission
 
