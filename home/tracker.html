@@ -494,7 +494,7 @@
                         <div class="register-form-wrap">
                           <h3>Development Tracker</h3>
                           <div class="register-form">
-                            <div>
+                            <form method="post" action="#">
                               <div class="row">
                                 <div class="col-12 col-sm-6">
                                   <div class="form-group">
@@ -567,11 +567,11 @@
                                   Submit
                                 </button>
                               </div>
-                              <div id="response"></div>
-                            </div>
+                              
+                            </form>
 
                             <h3>Further Questions?</h3>
-                            <div>
+                            <form method="post" id="messageForm">
                               <div class="row">
                                 <div
                                   class="col-12 col-sm-12 response-container"
@@ -580,15 +580,16 @@
                                     <label for="question"
                                       >Please ask your question</label
                                     >
-                                    <textarea
-                                      id="user-input"
+                                    <input
+                                      type="text"
+                                      id="message"
                                       placeholder="Enter your message"
                                       rows="3"
                                       cols="200"
                                       class="form-control"
                                       id="question"
-                                      name="question"
-                                    ></textarea>
+                                      name="message"
+                                    />
                                   </div>
                                 </div>
                               </div>
@@ -610,15 +611,13 @@
                                     Service</label
                                   >
                                 </div>
-                                <button
-                                  onclick="sendMessage()"
-                                  class="btn btn-reg"
-                                >
+                                <button class="btn btn-reg" type="submit">
                                   Ask
                                 </button>
+                              </form>
                                 <div id="response"></div>
                               </div>
-                            </div>
+                            
                           </div>
                         </div>
                       </div>
@@ -853,7 +852,7 @@
     <!-- custom js: custom scripts for theme style switcher for demo purpose  -->
     <script id="switcherhandle" src="assets/switcher/switcher.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/scripts.js"></script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
     <script>
@@ -892,6 +891,7 @@
             });
         });
     </script>
+   
   </body>
 
   <!-- Mirrored from codeboxr.net/themedemo/unialumni/html/register.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 17 Jan 2019 13:07:09 GMT -->
