@@ -32,3 +32,34 @@ document
         // Handle error
       });
   });
+
+//login script here
+//Login
+document
+  .getElementById("loginForm")
+  .addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    const email = document.getElementById("email").value;
+    const password = document.getElementById("password").value;
+    console.log(password);
+
+    axios
+      .post("https://development-tracker.onrender.com/login", {
+        email: email,
+        password: password,
+      })
+      .then((response) => {
+        console.log(response.data);
+        if (response.data.error === "email_not_found") {
+          errorMessage.innerText = "email not found please sign up";
+        }
+        window.location.assign("./home/index.html");
+        // document.getElementById("userName").textContent = data.name;
+        // document.getElementById("welcomeMessage").style.display = "block";
+      })
+      .catch((error) => {
+        console.error("Error:", error);
+        // Handle error
+      });
+  });
