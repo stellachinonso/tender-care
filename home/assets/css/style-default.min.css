@@ -2650,7 +2650,7 @@ blockquote:before {
   color: #3a3b3c;
 }
 .directory-page-content-warp .directory-text-wrap h2 strong {
-  color: #3b60c9;
+  color: #c43f76;
 }
 .directory-page-content-warp .directory-text-wrap .table-search-area form {
   line-height: 1;
@@ -2713,7 +2713,7 @@ blockquote:before {
   .directory-text-wrap
   .table-search-area
   .btn-brand:hover {
-  background-color: #c43f76;
+  background-color: #fff;
   color: #fff;
 }
 .directory-page-content-warp .directory-text-wrap .show-memeber {
@@ -2740,7 +2740,7 @@ blockquote:before {
   font-weight: 700;
 }
 .directory-table .table tbody tr td {
-  background-color: #c43f76;
+  background-color: #fff;
   color: #3a3b3c;
   font-weight: 500;
   font-size: 1.8rem;
@@ -2782,10 +2782,11 @@ blockquote:before {
   width: 100%;
   display: block;
   text-align: center;
-  background-color: #c43f76;
+  background-color: #fff;
   border: 1px solid #c43f76;
   color: #6a78a1;
   padding: 12px 15px;
+  border-radius: 5px;
   margin-bottom: 15px;
   -webkit-transition: all 0.4s ease-out;
   -moz-transition: all 0.4s ease-out;
