@@ -60,7 +60,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
               >Login</label
             >
             <article>
-              <form action="#" method="post">
+              <form action="#" method="get" id="loginForm">
                 <h3 class="legend">Login Here</h3>
                 <div class="input">
                   <span class="fa fa-envelope-o" aria-hidden="true"></span>
@@ -70,6 +70,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                     name="email"
                     required
                     id="email"
+                    autocomplete="on"
                   />
                 </div>
                 <div class="input">
@@ -80,12 +81,14 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                     name="password"
                     required
                     id="password"
+                    autocomplete="on"
                   />
                 </div>
-                <button type="submit" class="btn submit" onclick="auth()">
+                <button type="submit" id="button" class="btn submit">
                   Login
                 </button>
-                <a href="#" class="bottom-text-w3ls">Forgot Password?</a>
+                <div id="error-message" style="color: red; display: none"></div>
+                <a href="section3" class="bottom-text-w3ls">Forgot Password?</a>
               </form>
             </article>
           </div>
@@ -102,17 +105,17 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                   <span class="fa fa-user-o" aria-hidden="true"></span>
                   <input
                     type="text"
-                    placeholder="Enter Fullname"
-                    name="name"
+                    placeholder="Fullname"
+                    name="fullname"
                     required
-                    autocomplete="on"
+                    autocomplete="fullname"
                   />
                 </div>
                 <div class="input">
                   <span class="fa fa-envelope-o" aria-hidden="true"></span>
                   <input
                     type="email"
-                    placeholder="Enter Email"
+                    placeholder="Email"
                     name="email"
                     required
                     autocomplete="on"
@@ -122,7 +125,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                   <span class="fa fa-key" aria-hidden="true"></span>
                   <input
                     type="password"
-                    placeholder="Enter Password"
+                    placeholder="Password"
                     name="password"
                     required
                     autocomplete="on"
@@ -174,6 +177,43 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     </div>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-    <script src="/scripts.js"></script>
+    <!-- <script src="/scripts.js"></script> -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script> -->
+    <script>
+      document
+        .getElementById("registrationForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault(); // Prevent default form submission
+
+          // Collect form data
+          const formData = new FormData(event.target);
+
+          // Convert formData to JSON object
+          const jsonObject = {};
+          formData.forEach(function (value, key) {
+            jsonObject[key] = value;
+          });
+          console.log(jsonObject);
+          // Send form data using Axios
+          axios
+            .post("https://development-tracker.onrender.com/signup", jsonObject)
+            .then((response) => {
+              console.log("Response:", response.data);
+              // Handle success
+              swal({
+                title: "Good job!",
+                text: "Registration Successful!",
+                icon: "success",
+                button: "Close",
+              }).then(function () {
+                location.reload();
+              });
+            })
+            .catch((error) => {
+              console.error("Error:", error);
+              // Handle error
+            });
+        });
+    </script>
   </body>
 </html>
