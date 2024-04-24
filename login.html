@@ -96,33 +96,36 @@ License URL: http://creativecommons.org/licenses/by/3.0/
               >Register</label
             >
             <article>
-              <form action="#" method="post">
+              <form action="#" method="post" id="registrationForm">
                 <h3 class="legend">Register Here</h3>
                 <div class="input">
                   <span class="fa fa-user-o" aria-hidden="true"></span>
                   <input
                     type="text"
-                    placeholder="Fullname"
+                    placeholder="Enter Fullname"
                     name="name"
                     required
+                    autocomplete="on"
+                  />
+                </div>
+                <div class="input">
+                  <span class="fa fa-envelope-o" aria-hidden="true"></span>
+                  <input
+                    type="email"
+                    placeholder="Enter Email"
+                    name="email"
+                    required
+                    autocomplete="on"
                   />
                 </div>
                 <div class="input">
                   <span class="fa fa-key" aria-hidden="true"></span>
                   <input
                     type="password"
-                    placeholder="Password"
+                    placeholder="Enter Password"
                     name="password"
                     required
-                  />
-                </div>
-                <div class="input">
-                  <span class="fa fa-key" aria-hidden="true"></span>
-                  <input
-                    type="password"
-                    placeholder="Confirm Password"
-                    name="password"
-                    required
+                    autocomplete="on"
                   />
                 </div>
                 <button type="submit" class="btn submit">Register</button>
@@ -169,19 +172,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
       </div>
       <!-- //copyright -->
     </div>
-    <script>
-      function auth() {
-        var email = document.getElementById("email").value;
-        var password = document.getElementById("password").value;
-        //condition
-        if (email == "admin@gmail.com" && password == 112233) {
-          window.location.assign("./html/index.html");
-          alert("login successful");
-        } else {
-          alert("invalid information");
-          return;
-        }
-      }
-    </script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="/scripts.js"></script>
   </body>
 </html>
