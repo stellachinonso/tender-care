@@ -389,7 +389,7 @@ p.para-style-2 a {
 
 .submit {
   margin: 2.3em auto 0;
-  background: #c43f76;
+  background: #c43f76 !important;
   border: none;
   cursor: pointer;
   font-weight: 600;
@@ -400,7 +400,7 @@ p.para-style-2 a {
   transition: 0.5s all;
   display: block;
   color: #fff;
-  padding: 14px 30px;
+  padding: 14px 20px;
   -webkit-border-radius: 0;
   -o-border-radius: 0;
   -ms-border-radius: 0;

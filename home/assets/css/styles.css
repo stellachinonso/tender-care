@@ -12,7 +12,18 @@ textarea {
 
 #response {
   margin-top: 10px;
-  border: 1px solid #ccc;
+  border: 1px solid #d92792;
   padding: 10px;
   min-height: 100px;
+  border-radius: 5px;
+  color: #131c33;
+}
+
+#second-response {
+  margin-top: 10px;
+  border: 1px solid #d92792;
+  padding: 10px;
+  min-height: 100px;
+  border-radius: 5px;
+  color: #131c33 !important;
 }

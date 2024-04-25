@@ -316,7 +316,7 @@ textarea.form-control {
   background-color: #c43f76;
   color: #fff;
   display: block;
-  border-radius: 0;
+  border-radius: 5px;
   font-size: 1.6rem;
   line-height: 2.5600000000000005rem;
   line-height: 1;
@@ -2783,7 +2783,7 @@ blockquote:before {
   display: block;
   text-align: center;
   background-color: #fff;
-  border: 1px solid #c43f76;
+  border: 2px solid #c43f76;
   color: #6a78a1;
   padding: 12px 15px;
   border-radius: 5px;
@@ -2800,6 +2800,7 @@ blockquote:before {
   width: 100%;
   padding: 15px 20px;
   margin-top: 20px;
+  border-radius: 5px;
 }
 .register-form-content .register-form-wrap {
   position: relative;
@@ -2855,7 +2856,7 @@ blockquote:before {
   padding: 10px 15px;
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
-  border-radius: 0;
+  border-radius: 5px;
   font-size: 1.4rem;
   line-height: 2.2399999999999998rem;
   line-height: 1;
