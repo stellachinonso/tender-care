@@ -67,7 +67,7 @@ async function sendMessage() {
 //AI response1
 async function sendMessage2() {
   const userMessage = document.getElementById("user-input").value;
-  const responseContainer = document.getElementById("response");
+  const responseContainer = document.getElementById("second-response");
 
   try {
     const response = await fetch(

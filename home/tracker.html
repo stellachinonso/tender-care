@@ -218,7 +218,7 @@
       media="all"
     />
   </head>
-  <>
+  <body>
     <!--[if lt IE 7]>
       <p class="browsehappy">
         We are Extreamly sorry, But the browser you are using is probably from
@@ -259,7 +259,7 @@
           <div class="row">
             <div class="col-lg-12">
               <nav class="main-menu navbar navbar-expand-lg navbar-light">
-                <a class="navbar-brand" href="index.html">
+                <a class="navbar-brand" href="home.html">
                   <img src="assets/img/logo.png" alt="Logo" />
                 </a>
                 <button
@@ -276,7 +276,7 @@
                 <div class="collapse navbar-collapse" id="menucontent">
                   <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                      <a class="nav-link" href="index.html">Home</a>
+                      <a class="nav-link" href="home.html">Home</a>
                     </li>
                     <li class="nav-item active">
                       <a class="nav-link" href="tracker.html">Tracker</a>
@@ -524,10 +524,7 @@
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                      <div class="custom-control custom-checkbox float-lg-right">
-                                          <input type="checkbox" class="custom-control-input" id="customCheck1">
-                                          <label class="custom-control-label" for="customCheck1"> I have read and agree to the <a href="#">TenderCare</a> Terms of Service</label>
-                                      </div>
+                                     
                                       <button onclick="sendMessage()" class="btn btn-reg">Submit</button>
                                   </div>
                                   <div id="response"></div>
@@ -537,19 +534,17 @@
                                     <div class="row">
                                       <div class="col-12 col-sm-12 response-container">
                                           <div class="form-group">
-                                              <label for="question">Please ask your question</label>
-                                              <textarea id="user-input" placeholder="Enter your message" rows="3" cols="200" class="form-control" id="question" name="question"></textarea>
+                                              <label for="question">Please share your concerns</label>
+                                              <textarea id="user-input" placeholder="Type in your concerns" rows="3" cols="200" class="form-control" id="question" name="question"></textarea>
                                           </div>
                                       </div>
                                   </div>
                                   <div class="form-group">
-                                    <div class="custom-control custom-checkbox float-lg-right">
-                                        <input type="checkbox" class="custom-control-input" id="customCheck1">
-                                        <label class="custom-control-label" for="customCheck1"> I have read and agree to the <a href="#">Tender Care</a> Terms of Service</label>
-                                    </div>
+                                    
                                     <button onclick="sendMessage2()" class="btn btn-reg">Ask</button>
                                 
                                 </div>
+                                <div id="second-response"></div>
                                   </div>
 
                                     
@@ -600,7 +595,7 @@
                 <li><a href="tracker.html">Tracker</a></li>
                 <li><a href="connect.html">Connect</a></li>
                 <li><a href="resources.html">Resources</a></li>
-                <li><a href="#">About</a></li>
+                <li><a href="about.html">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
               </ul>
             </div>
@@ -813,8 +808,8 @@
               console.log("Response:", response.data);
               // Handle success
               swal({
-                title: "Good job!",
-                text: "Registration Successful!",
+                title: "Well done!",
+                text: "Child detail Created Successfully!",
                 icon: "success",
                 button: "Close",
               }).then(function () {
@@ -824,6 +819,12 @@
             .catch((error) => {
               console.error("Error:", error);
               // Handle error
+              swal({
+        title: "Error!",
+        text: "An error occurred while submitting the form. Please try again later.",
+        icon: "error",
+        button: "Close",
+      });
             });
         });
     </script>

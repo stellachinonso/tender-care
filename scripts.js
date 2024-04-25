@@ -30,3 +30,5 @@ document
         errorMessage.style.display = "block";
       });
   });
+
+//Privacy Modal
