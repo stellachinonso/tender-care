@@ -15,24 +15,6 @@ document.getElementById("logoutBtn").addEventListener("click", function () {
     .catch((error) => console.error("Error:", error));
 });
 
-//logout
-document.getElementById("logoutBtn").addEventListener("click", function () {
-  // Send a request to the server to logout
-  fetch("/logout", {
-    method: "POST",
-    credentials: "same-origin", // Include cookies in the request if using sessions
-  })
-    .then((response) => {
-      if (response.ok) {
-        // Redirect to login page after successful logout
-        window.location.assign = "../index.html";
-      } else {
-        console.error("Logout failed");
-      }
-    })
-    .catch((error) => console.error("Error:", error));
-});
-
 //AI Response
 async function sendMessage() {
   const userEmail = document.getElementById("register_email").value;
@@ -88,3 +70,21 @@ async function sendMessage2() {
     responseContainer.innerText = "Error: Failed to get response from server";
   }
 }
+
+// //logout
+// document.getElementById("logoutBtn").addEventListener("click", function () {
+//   // Send a request to the server to logout
+//   fetch("/logout", {
+//     method: "POST",
+//     credentials: "same-origin", // Include cookies in the request if using sessions
+//   })
+//     .then((response) => {
+//       if (response.ok) {
+//         // Redirect to login page after successful logout
+//         window.location.assign = "/login.html";
+//       } else {
+//         console.error("Logout failed");
+//       }
+//     })
+//     .catch((error) => console.error("Error:", error));
+// });
